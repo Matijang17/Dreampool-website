@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 
-import { urlFor } from '@/lib/sanity'
+import { client, urlFor, projectsQuery } from '@/lib/sanity'
 import { CTASection } from '@/components/sections/CTASection'
 
 export const metadata: Metadata = {

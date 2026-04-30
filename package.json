@@ -10,14 +10,15 @@
   },
   "dependencies": {
     "@portabletext/react": "^3.0.18",
-    "@sanity/client": "^6.21.3",
+    "@sanity/client": "^6.29.1",
     "@sanity/image-url": "^1.2.0",
-    "@sanity/vision": "^4.22.0",
-    "next": "^16.2.4",
-    "next-sanity": "^11.6.13",
+    "@sanity/vision": "^3.89.0",
+    "next": "^14.2.0",
+    "next-sanity": "^11.2.0",
     "react": "^18",
     "react-dom": "^18",
-    "sanity": "^4.22.0",
+    "react-is": "^19.2.5",
+    "sanity": "^3.70.0",
     "styled-components": "^6.4.1"
   },
   "devDependencies": {
