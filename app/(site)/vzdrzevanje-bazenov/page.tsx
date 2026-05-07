@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Vzdrževanje Bazenov | DreamPool',
     description: 'Tedensko ali mesečno vzdrževanje, kemijska obdelava vode in čiščenje bazena.',
     url: '/vzdrzevanje-bazenov',
-    images: [{ url: '/images/Bazen-hero-image.webp', width: 1200, height: 630 }],
+    images: [{ url: '/images/servisiranje-bazenov.webp', width: 1200, height: 630 }],
   },
 }
 
@@ -78,7 +78,7 @@ export default function VzdrzevanjeBarenov() {
       <div className="min-h-screen bg-white pt-24">
         <section className="relative py-20 overflow-hidden">
           <Image
-            src="/images/Bazen-hero-image.webp"
+            src="/images/servisiranje-bazenov.webp"
             alt=""
             fill
             priority
