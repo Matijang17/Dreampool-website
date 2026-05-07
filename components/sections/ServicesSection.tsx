@@ -19,7 +19,7 @@ const services = [
     title: 'Servis bazenske tehnike',
     description:
       'Servisiramo filtrske naprave, črpalke, grelce in dozirne sisteme. Redno vzdrževanje in hitre intervencije po vsej Sloveniji.',
-    image: 'https://cdn.sanity.io/images/u77huvva/production/30ddfd07f56ecd8711ba98de78d825d8ab68b279-600x483.jpg?w=600&fit=max&auto=format',
+    image: '/images/vzdrzevanje-bazena.webp',
     href: '/servis',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
