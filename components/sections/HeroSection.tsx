@@ -29,7 +29,7 @@ export function HeroSection() {
           <div className="inline-flex items-center gap-2 border border-pool-accent/40 bg-pool-accent/10 rounded-sm px-4 py-2 mb-8 animate-fade-in">
             <span className="w-2 h-2 rounded-full bg-pool-accent animate-pulse" />
             <span className="text-pool-accent text-xs tracking-widest uppercase font-body">
-              Premium Bazeni · Slovenija & Hrvaška
+              Premium Bazeni · Slovenija
             </span>
           </div>
 
@@ -96,14 +96,6 @@ export function HeroSection() {
             </a>
           </div>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 animate-bounce">
-        <span className="text-pool-white/30 text-xs tracking-widest uppercase">Scrolla</span>
-        <svg className="w-5 h-5 text-pool-accent/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
-        </svg>
       </div>
     </section>
   )
