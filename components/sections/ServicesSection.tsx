@@ -193,9 +193,9 @@ export function ServicesSection() {
             <Link
               key={i}
               href={service.href}
-              className="group relative bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-pool-accent/10 hover:border-pool-accent/40 transition-all duration-500 hover:-translate-y-1 flex flex-col"
+              className="group relative bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-pool-accent/10 hover:border-pool-accent/40 transition-all duration-500 hover:-translate-y-1 flex flex-col"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-48 overflow-hidden rounded-t-2xl">
                 <Image
                   src={service.image!}
                   alt={service.title}
@@ -209,14 +209,14 @@ export function ServicesSection() {
                 <div className="absolute top-4 right-4 font-display text-3xl font-bold text-white/40 leading-none select-none">
                   {formatNumber(i + 1)}
                 </div>
-
-                {/* Icon badge */}
-                <div className="absolute -bottom-5 left-5 w-11 h-11 rounded-xl bg-white shadow-lg shadow-pool-navy/15 border border-gray-100 flex items-center justify-center text-pool-accent group-hover:bg-pool-accent group-hover:text-white group-hover:scale-110 transition-all duration-300">
-                  {service.icon}
-                </div>
               </div>
 
-              <div className="p-5 pt-7 flex-grow flex flex-col">
+              {/* Icon badge — sibling of image, not clipped */}
+              <div className="absolute top-[10.5rem] left-5 z-10 w-11 h-11 rounded-xl bg-white shadow-lg shadow-pool-navy/15 border border-gray-100 flex items-center justify-center text-pool-accent group-hover:bg-pool-accent group-hover:text-white group-hover:scale-110 transition-all duration-300">
+                {service.icon}
+              </div>
+
+              <div className="p-5 pt-9 flex-grow flex flex-col">
                 <h3 className="font-display text-lg font-bold text-pool-navy mb-2 group-hover:text-pool-accent transition-colors duration-300">
                   {service.title}
                 </h3>
