@@ -9,9 +9,9 @@ const testimonials = [
   {
     name: 'Nataša K.',
     location: 'Primorska',
-    text: 'Profesionalni, točni in natančni. Vse je bilo narejeno, kot smo se dogovorili, v dogovorjenem roku. Fiberglass bazen je lepo videti in enostaven za vzdrževanje.',
+    text: 'Profesionalni, točni in natančni. Vse je bilo narejeno, kot smo se dogovorili, v dogovorjenem roku. Bazen je lepo videti in enostaven za vzdrževanje.',
     rating: 5,
-    type: 'Fiberglass bazen',
+    type: 'Vkopan bazen',
   },
   {
     name: 'Gregor in Ana',

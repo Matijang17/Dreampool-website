@@ -3,7 +3,6 @@ import Image from 'next/image'
 
 const services = [
   { label: 'Novogradnja bazenov', href: '/gradnja-bazenov' },
-  { label: 'Fiberglass bazeni', href: '/bazeni/fiberglass-bazeni' },
   { label: 'Vkopani bazeni', href: '/bazeni/vkopani-bazeni' },
   { label: 'Overflow bazeni', href: '/bazeni/overflow-bazeni' },
   { label: 'Wellness & Jacuzzi', href: '/bazeni/wellness-bazeni' },

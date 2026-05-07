@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 }
 
 const faqs = [
-  { q: 'Kakšna je razlika med vkopan in fiberglass bazenom?', a: 'Vkopani bazen je grajen na mestu iz betona ali modularnih plošč, kar omogoča popolno svobodo oblike, velikosti in globine. Fiberglass je tovarniška lupina z omejenimi dimenzijami a hitrejšo montažo.' },
   { q: 'Koliko stane vkopani bazen?', a: 'Cena vkopanega bazena začne pri ca. 25.000 €, odvisno od dimenzij, oblike, materiali in opreme. Za točno ponudbo stopite v kontakt z nami.' },
   { q: 'Kako dolgo traja gradnja vkopanega bazena?', a: 'Gradnja standardnega vkopanega bazena traja 4–8 tednov glede na kompleksnost projekta, vreme in dostop do lokacije.' },
   { q: 'Kakšne oblike so možne?', a: 'Vkopani bazeni so popolnoma prilagodljivi — pravokotni, ovalni, ledvičasti ali povsem atipični. Prav tako je možna integracija wellness cone, cascade ali overflow efektov.' },

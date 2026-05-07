@@ -6,18 +6,10 @@ const staticPosts = [
   {
     _id: '1',
     title: 'Koliko stane bazen v Sloveniji 2026?',
-    excerpt: 'Celovit vodič po cenah gradnje bazenov — od fiberglass do betonskih, z vsemi skritimi stroški.',
+    excerpt: 'Celovit vodič po cenah gradnje bazenov — vkopani in betonski, z vsemi skritimi stroški.',
     slug: { current: 'koliko-stane-bazen-slovenija-2026' },
     publishedAt: '2026-01-15',
     mainImage: { asset: { url: 'https://cdn.sanity.io/images/u77huvva/production/6da0045ebc99873dd993284fa370bc86a4dc51fa-5120x2880.jpg?w=800&fit=max&auto=format' } },
-  },
-  {
-    _id: '2',
-    title: 'Fiberglass ali beton: kateri bazen izbrati?',
-    excerpt: 'Primerjava prednosti in slabosti obeh materialov, ki vam bo pomagala sprejeti pravo odločitev.',
-    slug: { current: 'fiberglass-ali-beton-bazen' },
-    publishedAt: '2026-01-05',
-    mainImage: { asset: { url: 'https://cdn.sanity.io/images/u77huvva/production/7ee2f8ad2f09fc39781fb51d3857c7613b4f66f7-5120x2880.jpg?w=800&fit=max&auto=format' } },
   },
   {
     _id: '3',
@@ -26,6 +18,14 @@ const staticPosts = [
     slug: { current: 'gradbeno-dovoljenje-bazen-slovenija' },
     publishedAt: '2025-12-20',
     mainImage: { asset: { url: 'https://cdn.sanity.io/images/u77huvva/production/1ec7050f3670dd73d67ef907f398c548f2e64e4f-5120x2880.jpg?w=800&fit=max&auto=format' } },
+  },
+  {
+    _id: '4',
+    title: 'Vkopani bazen: vodič po izbiri prave oblike',
+    excerpt: 'Pravokotni, ovalni ali atipični — kako izbrati obliko vkopanega bazena, ki najbolj ustreza vašemu vrtu.',
+    slug: { current: 'vkopani-bazen-izbira-oblike' },
+    publishedAt: '2026-01-05',
+    mainImage: { asset: { url: 'https://cdn.sanity.io/images/u77huvva/production/7ee2f8ad2f09fc39781fb51d3857c7613b4f66f7-5120x2880.jpg?w=800&fit=max&auto=format' } },
   },
 ]
 

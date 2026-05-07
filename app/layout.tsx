@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     'bazeni',
     'gradnja bazenov',
     'bazeni slovenija',
-    'fiberglass bazeni',
     'vkopani bazeni',
     'bazen cena',
     'bazeni ljubljana',

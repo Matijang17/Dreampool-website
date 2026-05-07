@@ -21,7 +21,7 @@ const schema = {
 }
 
 const faqs = [
-  { q: 'Koliko časa traja gradnja bazena?', a: 'Odvisno od tipa bazena. Fiberglass bazen montiramo v 2–5 dni, betonski ali vkopani bazen pa vzame 3–6 tednov glede na velikost in zahtevnost projekta.' },
+  { q: 'Koliko časa traja gradnja bazena?', a: 'Odvisno od tipa bazena. Betonski ali vkopani bazen vzame 3–6 tednov glede na velikost in zahtevnost projekta.' },
   { q: 'Ali potrebujem gradbeno dovoljenje?', a: 'Bazeni do 50 m³ in do 150 cm globine praviloma ne potrebujejo gradbenega dovoljenja. Za večje bazene je potrebna priglasitev del. Vedno preverite lokalni urbanistični načrt.' },
   { q: 'Kakšen je minimalen vrt za bazen?', a: 'Za standardni bazen (8x4m) priporočamo vsaj 150 m² prostega travnika. Upoštevati je treba odmik od sosedov (min. 1,5 m) in od objekta.' },
   { q: 'Ali nudite poprodajni servis?', a: 'Da, nudimo letno in mesečno vzdrževanje, servis bazenske tehnike in urgentne intervencije. Naše stranke imajo prednostno obravnavo.' },
@@ -90,9 +90,8 @@ export default function GradnjaBazenov() {
               <h2 className="font-display text-3xl font-bold text-pool-navy mb-10 text-center">
                 Kateri bazen je pravi za vas?
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
-                  { title: 'Fiberglass bazeni', desc: 'Hitra montaža v 2–5 dneh, minimalno vzdrževanje, 10-letna garancija na lupino. Idealni za večino dvorišč.', href: '/bazeni/fiberglass-bazeni' },
                   { title: 'Vkopani bazeni', desc: 'Popolna svoboda oblike in velikosti. Betonska ali modularna konstrukcija — trajna investicija.', href: '/bazeni/vkopani-bazeni' },
                   { title: 'Overflow bazeni', desc: 'Eleganten dizajn brez vidnih robov. Voda teče čez rob — luksuzni vizualni efekt za zahtevne.', href: '/bazeni/overflow-bazeni' },
                   { title: 'Wellness & Jacuzzi', desc: 'Zasebni spa v vrtu — masažne šobe, LED osvetlitev in celoletno ogrevanje.', href: '/bazeni/wellness-bazeni' },

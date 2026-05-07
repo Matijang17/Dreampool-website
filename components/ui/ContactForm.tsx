@@ -4,7 +4,6 @@ import { useState } from 'react'
 
 const projectTypes = [
   'Novogradnja bazena',
-  'Fiberglass bazen',
   'Vkopani bazen',
   'Overflow bazen',
   'Infinity bazen',

@@ -18,13 +18,6 @@ const staticProjects = [
     mainImage: { asset: { url: 'https://cdn.sanity.io/images/u77huvva/production/7ee2f8ad2f09fc39781fb51d3857c7613b4f66f7-5120x2880.jpg?w=800&fit=max&auto=format' } },
   },
   {
-    _id: '3',
-    title: 'Fiberglass bazen z jacuzzijem',
-    location: 'Gorenjska',
-    type: 'fiberglass',
-    mainImage: { asset: { url: 'https://cdn.sanity.io/images/u77huvva/production/1ec7050f3670dd73d67ef907f398c548f2e64e4f-5120x2880.jpg?w=800&fit=max&auto=format' } },
-  },
-  {
     _id: '4',
     title: 'Premium bazen za villu',
     location: 'Štajerska',
@@ -49,7 +42,6 @@ const staticProjects = [
 
 const typeLabels: Record<string, string> = {
   vkopan: 'Vkopan bazen',
-  fiberglass: 'Fiberglass',
   overflow: 'Overflow',
   infinity: 'Infinity',
   wellness: 'Wellness',

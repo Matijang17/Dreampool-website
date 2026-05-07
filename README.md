@@ -112,7 +112,6 @@ dreampool/
 │   ├── (site)/                 ← Vse podstrani (route group)
 │   │   ├── gradnja-bazenov/
 │   │   ├── bazeni/
-│   │   │   ├── fiberglass-bazeni/
 │   │   │   ├── vkopani-bazeni/
 │   │   │   ├── overflow-bazeni/
 │   │   │   └── wellness-bazeni/
@@ -218,7 +217,6 @@ CONTACT_EMAIL
 |-----|----------------|
 | `/` | dreampool, bazeni slovenija |
 | `/gradnja-bazenov` | gradnja bazenov, novogradnja bazena |
-| `/bazeni/fiberglass-bazeni` | fiberglass bazeni |
 | `/bazeni/vkopani-bazeni` | vkopani bazeni |
 | `/bazeni/overflow-bazeni` | overflow bazen |
 | `/bazeni/wellness-bazeni` | wellness bazen, jacuzzi |

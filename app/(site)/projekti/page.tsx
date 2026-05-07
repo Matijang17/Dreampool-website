@@ -6,23 +6,23 @@ import { CTASection } from '@/components/sections/CTASection'
 
 export const metadata: Metadata = {
   title: 'Naši Projekti — Galerija Bazenov | DreamPool',
-  description: 'Oglejte si galerijo naših dokončanih bazenov po vsej Sloveniji. 50+ premium projektov — fiberglass, vkopani, overflow in infinity bazeni.',
+  description: 'Oglejte si galerijo naših dokončanih bazenov po vsej Sloveniji. 50+ premium projektov — vkopani, overflow, infinity in wellness bazeni.',
   alternates: { canonical: 'https://dreampool.si/projekti' },
 }
 
 const staticProjects = [
   { _id: '1', title: 'Elegantni vkopani bazen', location: 'Ljubljana', type: 'vkopan', year: 2025, mainImage: { asset: { url: 'https://cdn.sanity.io/images/u77huvva/production/6da0045ebc99873dd993284fa370bc86a4dc51fa-5120x2880.jpg?w=800&fit=max&auto=format' } } },
   { _id: '2', title: 'Moderni overflow bazen', location: 'Primorska', type: 'overflow', year: 2025, mainImage: { asset: { url: 'https://cdn.sanity.io/images/u77huvva/production/7ee2f8ad2f09fc39781fb51d3857c7613b4f66f7-5120x2880.jpg?w=800&fit=max&auto=format' } } },
-  { _id: '3', title: 'Fiberglass bazen z jacuzzijem', location: 'Gorenjska', type: 'fiberglass', year: 2024, mainImage: { asset: { url: 'https://cdn.sanity.io/images/u77huvva/production/1ec7050f3670dd73d67ef907f398c548f2e64e4f-5120x2880.jpg?w=800&fit=max&auto=format' } } },
+  { _id: '3', title: 'Vkopani bazen z jacuzzijem', location: 'Gorenjska', type: 'wellness', year: 2024, mainImage: { asset: { url: 'https://cdn.sanity.io/images/u77huvva/production/1ec7050f3670dd73d67ef907f398c548f2e64e4f-5120x2880.jpg?w=800&fit=max&auto=format' } } },
   { _id: '4', title: 'Premium bazen za villu', location: 'Štajerska', type: 'vkopan', year: 2024, mainImage: { asset: { url: 'https://cdn.sanity.io/images/u77huvva/production/de537d3e33593130bfe59dc259ccea1babc816fa-5120x2880.jpg?w=800&fit=max&auto=format' } } },
   { _id: '5', title: 'Infinity bazen z razgledom', location: 'Kras', type: 'infinity', year: 2024, mainImage: { asset: { url: 'https://cdn.sanity.io/images/u77huvva/production/9a698061e50bd3de0ed9b3046e9ad89427fd0576-5120x2880.jpg?w=800&fit=max&auto=format' } } },
   { _id: '6', title: 'Wellness bazen s savno', location: 'Dolenjska', type: 'wellness', year: 2023, mainImage: { asset: { url: 'https://cdn.sanity.io/images/u77huvva/production/3148dc011711f8ce31c71fd854c39d43ba78280c-5120x2880.jpg?w=800&fit=max&auto=format' } } },
   { _id: '7', title: 'Kompaktni vkopani bazen', location: 'Notranjska', type: 'vkopan', year: 2023, mainImage: { asset: { url: 'https://cdn.sanity.io/images/u77huvva/production/845f1d37a96e904b301c913511fdf1df31f57356-2880x5120.jpg?w=800&fit=max&auto=format' } } },
-  { _id: '8', title: 'Moderni bazen z roletami', location: 'Savinjska', type: 'fiberglass', year: 2023, mainImage: { asset: { url: 'https://cdn.sanity.io/images/u77huvva/production/518e25a9167f5312b733aabac421a00e267d848f-5120x2880.jpg?w=800&fit=max&auto=format' } } },
+  { _id: '8', title: 'Moderni bazen z roletami', location: 'Savinjska', type: 'vkopan', year: 2023, mainImage: { asset: { url: 'https://cdn.sanity.io/images/u77huvva/production/518e25a9167f5312b733aabac421a00e267d848f-5120x2880.jpg?w=800&fit=max&auto=format' } } },
 ]
 
 const typeLabels: Record<string, string> = {
-  vkopan: 'Vkopan bazen', fiberglass: 'Fiberglass', overflow: 'Overflow', infinity: 'Infinity', wellness: 'Wellness',
+  vkopan: 'Vkopan bazen', overflow: 'Overflow', infinity: 'Infinity', wellness: 'Wellness',
 }
 
 export default async function ProjektiPage() {
