@@ -77,7 +77,7 @@ export default function GradnjaBazenov() {
               </div>
               <div className="relative rounded-2xl overflow-hidden h-80">
                 <Image
-                  src="https://cdn.sanity.io/images/u77huvva/production/46910edd87559712e9a315e8e3df4a6001a53040-600x479.jpg?w=800&fit=max&auto=format"
+                  src="images/gradnja-bazenov.webp"
                   alt="Gradnja bazena - DreamPool"
                   fill
                   className="object-cover"
