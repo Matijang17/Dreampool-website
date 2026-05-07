@@ -49,19 +49,30 @@ const nextConfig = {
     ]
   },
   async redirects() {
+    // Domain canonicalization runs ONLY when explicitly enabled.
+    // Set PRIMARY_DOMAIN_LIVE=1 in Vercel env vars after dreampool.si DNS
+    // is pointed at the Vercel deployment.
+    const canonicalize = process.env.PRIMARY_DOMAIN_LIVE === '1'
+
+    const domainRedirects = canonicalize
+      ? [
+          {
+            source: '/:path*',
+            has: [{ type: 'host', value: 'www.dreampool.si' }],
+            destination: 'https://dreampool.si/:path*',
+            permanent: true,
+          },
+          {
+            source: '/:path*',
+            has: [{ type: 'host', value: 'dreampool-website.vercel.app' }],
+            destination: 'https://dreampool.si/:path*',
+            permanent: true,
+          },
+        ]
+      : []
+
     return [
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'www.dreampool.si' }],
-        destination: 'https://dreampool.si/:path*',
-        permanent: true,
-      },
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'dreampool-website.vercel.app' }],
-        destination: 'https://dreampool.si/:path*',
-        permanent: true,
-      },
+      ...domainRedirects,
       { source: '/home', destination: '/', permanent: true },
       { source: '/index', destination: '/', permanent: true },
       { source: '/contact', destination: '/kontakt', permanent: true },
