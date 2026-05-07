@@ -1,35 +1,19 @@
-'use client'
-
-import { useEffect, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function HeroSection() {
-  const videoRef = useRef<HTMLVideoElement>(null)
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(() => {})
-    }
-  }, [])
-
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background video */}
+      {/* Background image */}
       <div className="absolute inset-0 z-0">
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover"
-          poster="https://cdn.sanity.io/images/u77huvva/production/e04efdd175ee857cb48f7367ccbfaa82d41d0f53-1328x602.jpg?w=1920&fit=max&auto=format"
-        >
-          <source
-            src="https://cdn.sanity.io/files/u77huvva/production/4f5ea6bcd6972efca9159a86cc69b9811d35c4b3.mp4"
-            type="video/mp4"
-          />
-        </video>
+        <Image
+          src="/images/Bazen-hero-image.webp"
+          alt="DreamPool premium bazen"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
         <div className="absolute inset-0 hero-overlay" />
         {/* Gold gradient at bottom */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-pool-navy to-transparent" />
