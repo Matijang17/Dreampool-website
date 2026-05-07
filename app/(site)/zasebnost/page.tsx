@@ -1,13 +1,24 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { breadcrumbSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Zasebnost | DreamPool',
-  description: 'Politika zasebnosti DreamPool — informacije o zbiranju in obdelavi osebnih podatkov.',
+  description: 'Politika zasebnosti DreamPool — informacije o zbiranju in obdelavi osebnih podatkov v skladu z GDPR.',
+  alternates: { canonical: '/zasebnost' },
+  robots: { index: true, follow: true },
 }
 
 export default function ZasebnostPage() {
   return (
+    <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: 'Domov', url: '/' },
+          { name: 'Zasebnost', url: '/zasebnost' },
+        ])}
+      />
     <div className="min-h-screen bg-pool-navy pt-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <Link href="/" className="btn-ghost text-xs mb-8 inline-flex">
@@ -32,5 +43,6 @@ export default function ZasebnostPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

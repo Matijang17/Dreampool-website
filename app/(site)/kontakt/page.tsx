@@ -1,11 +1,27 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ContactForm } from '@/components/ui/ContactForm'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { breadcrumbSchema, SITE } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Kontakt | DreamPool — Bazeni Slovenija',
   description: 'Stopite v stik z DreamPool. Telefon, e-pošta, WhatsApp. Brezplačno svetovanje za vaš bazen. Vogrsko 172, Volčja Draga.',
-  alternates: { canonical: 'https://dreampool.si/kontakt' },
+  alternates: { canonical: '/kontakt' },
+  openGraph: {
+    title: 'Kontakt | DreamPool',
+    description: 'Stopite v stik z DreamPool — telefon, e-pošta, WhatsApp.',
+    url: '/kontakt',
+  },
+}
+
+const contactPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  url: `${SITE.url}/kontakt`,
+  name: 'Kontakt — DreamPool',
+  description: 'Kontaktne informacije DreamPool — telefon, e-pošta, naslov.',
+  about: { '@id': `${SITE.url}/#organization` },
 }
 
 const contacts = [
@@ -54,6 +70,16 @@ const contacts = [
 
 export default function KontaktPage() {
   return (
+    <>
+      <JsonLd
+        data={[
+          contactPageSchema,
+          breadcrumbSchema([
+            { name: 'Domov', url: '/' },
+            { name: 'Kontakt', url: '/kontakt' },
+          ]),
+        ]}
+      />
     <div className="min-h-screen bg-white pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Header */}
@@ -130,5 +156,6 @@ export default function KontaktPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

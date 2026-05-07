@@ -2,22 +2,21 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { CTASection } from '@/components/sections/CTASection'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { serviceSchema, faqSchema, breadcrumbSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Gradnja Bazenov v Sloveniji | DreamPool — Ključ v Roke',
   description:
     'Iščete zanesljivo podjetje za gradnjo bazena v Sloveniji? DreamPool izvaja celoten projekt od načrta do vode. 50+ projektov, garancija, brezplačna ponudba.',
   keywords: ['gradnja bazenov', 'gradnja bazenov slovenija', 'bazen po meri', 'novogradnja bazena', 'vkopani bazen gradnja'],
-  alternates: { canonical: 'https://dreampool.si/gradnja-bazenov' },
-}
-
-const schema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'Gradnja bazenov po meri',
-  provider: { '@type': 'LocalBusiness', name: 'DreamPool' },
-  areaServed: 'Slovenia',
-  description: 'Projektiranje, dobava in montaža premium bazenov po meri v Sloveniji.',
+  alternates: { canonical: '/gradnja-bazenov' },
+  openGraph: {
+    title: 'Gradnja Bazenov v Sloveniji | DreamPool',
+    description: 'Ključ v roke — projektiranje, gradnja in zagon bazena. 50+ referenc po Sloveniji.',
+    url: '/gradnja-bazenov',
+    images: [{ url: '/images/Bazen-hero-image.webp', width: 1200, height: 630 }],
+  },
 }
 
 const faqs = [
@@ -30,12 +29,34 @@ const faqs = [
 export default function GradnjaBazenov() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <JsonLd
+        data={[
+          serviceSchema({
+            name: 'Gradnja bazenov po meri',
+            description: 'Projektiranje, dobava in montaža premium bazenov po meri v Sloveniji in na Hrvaškem.',
+            url: '/gradnja-bazenov',
+            image: '/images/Bazen-hero-image.webp',
+          }),
+          faqSchema(faqs),
+          breadcrumbSchema([
+            { name: 'Domov', url: '/' },
+            { name: 'Gradnja bazenov', url: '/gradnja-bazenov' },
+          ]),
+        ]}
+      />
 
       <div className="min-h-screen bg-white pt-24">
         {/* Hero */}
         <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-pool-deep via-pool-blue/30 to-pool-navy" />
+          <Image
+            src="/images/Bazen-hero-image.webp"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-pool-navy/85 via-pool-navy/70 to-pool-navy/90" />
           <div className="absolute inset-0 grid-bg opacity-20" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <nav className="flex items-center gap-2 text-pool-white/30 text-sm mb-8">
@@ -77,7 +98,7 @@ export default function GradnjaBazenov() {
               </div>
               <div className="relative rounded-2xl overflow-hidden h-80">
                 <Image
-                  src="images/gradnja-bazenov.webp"
+                  src="/images/gradnja-bazenov.webp"
                   alt="Gradnja bazena - DreamPool"
                   fill
                   className="object-cover"

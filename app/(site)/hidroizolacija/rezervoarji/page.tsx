@@ -1,21 +1,22 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { CTASection } from '@/components/sections/CTASection'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { serviceSchema, faqSchema, breadcrumbSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Hidroizolacije Rezervoarjev in Cistern | DreamPool Slovenija',
   description:
     'Strokovna hidroizolacija vodnih rezervoarjev, cistern in zadrževalnikov v Sloveniji. Certificirani materiali za pitno vodo. Betonski in armirani rezervoarji. Povpraševanje.',
-  alternates: { canonical: 'https://dreampool.si/hidroizolacija/rezervoarji' },
-}
-
-const schema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'Hidroizolacije rezervoarjev',
-  provider: { '@type': 'LocalBusiness', name: 'DreamPool' },
-  areaServed: 'Slovenia',
-  description: 'Hidroizolacija vodnih rezervoarjev, cistern in zadrževalnikov v Sloveniji.',
+  keywords: ['hidroizolacija rezervoarjev', 'cisterna pitne vode', 'zadrževalnik deževnice', 'požarni rezervoar'],
+  alternates: { canonical: '/hidroizolacija/rezervoarji' },
+  openGraph: {
+    title: 'Hidroizolacije Rezervoarjev | DreamPool',
+    description: 'Hidroizolacija cistern, zadrževalnikov in požarnih rezervoarjev. Certifikati za pitno vodo.',
+    url: '/hidroizolacija/rezervoarji',
+    images: [{ url: '/images/Bazen-hero-image.webp', width: 1200, height: 630 }],
+  },
 }
 
 const types = [
@@ -77,11 +78,33 @@ const faqs = [
 export default function HidroizolacijaRezervoarevPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <JsonLd
+        data={[
+          serviceSchema({
+            name: 'Hidroizolacije rezervoarjev',
+            description: 'Hidroizolacija vodnih rezervoarjev, cistern in zadrževalnikov s certificiranimi materiali za pitno vodo.',
+            url: '/hidroizolacija/rezervoarji',
+          }),
+          faqSchema(faqs),
+          breadcrumbSchema([
+            { name: 'Domov', url: '/' },
+            { name: 'Hidroizolacija', url: '/hidroizolacija/rezervoarji' },
+            { name: 'Hidroizolacije rezervoarjev', url: '/hidroizolacija/rezervoarji' },
+          ]),
+        ]}
+      />
 
       <div className="min-h-screen bg-white pt-24">
         <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-pool-deep via-pool-blue/30 to-pool-navy" />
+          <Image
+            src="/images/Bazen-hero-image.webp"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-pool-navy/85 via-pool-navy/70 to-pool-navy/90" />
           <div className="absolute inset-0 grid-bg opacity-20" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <nav className="flex items-center gap-2 text-pool-white/30 text-sm mb-8">

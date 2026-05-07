@@ -1,21 +1,22 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { CTASection } from '@/components/sections/CTASection'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { serviceSchema, faqSchema, breadcrumbSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Kronsko (Diamantno) Vrtanje | DreamPool Slovenija',
   description:
     'Strokovno kronsko in diamantno vrtanje skozi beton, armirani beton in ploščice v Sloveniji. Natančni preboji brez poškodb za bazensko inštalacijo in renovacije. Povpraševanje.',
-  alternates: { canonical: 'https://dreampool.si/kronsko-vrtanje' },
-}
-
-const schema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'Kronsko (diamantno) vrtanje',
-  provider: { '@type': 'LocalBusiness', name: 'DreamPool' },
-  areaServed: 'Slovenia',
-  description: 'Diamantno in kronsko vrtanje skozi beton in armirani beton za bazensko inštalacijo.',
+  keywords: ['kronsko vrtanje', 'diamantno vrtanje', 'preboji v betonu', 'bazenski preboji'],
+  alternates: { canonical: '/kronsko-vrtanje' },
+  openGraph: {
+    title: 'Kronsko (Diamantno) Vrtanje | DreamPool',
+    description: 'Diamantno vrtanje skozi beton, armirani beton in ploščice — Ø30 do Ø400 mm.',
+    url: '/kronsko-vrtanje',
+    images: [{ url: '/images/Bazen-hero-image.webp', width: 1200, height: 630 }],
+  },
 }
 
 const applications = [
@@ -71,11 +72,32 @@ const faqs = [
 export default function KronskoVrtanjePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <JsonLd
+        data={[
+          serviceSchema({
+            name: 'Kronsko (diamantno) vrtanje',
+            description: 'Diamantno in kronsko vrtanje skozi beton in armirani beton za bazensko inštalacijo in renovacije.',
+            url: '/kronsko-vrtanje',
+          }),
+          faqSchema(faqs),
+          breadcrumbSchema([
+            { name: 'Domov', url: '/' },
+            { name: 'Kronsko (diamantno) vrtanje', url: '/kronsko-vrtanje' },
+          ]),
+        ]}
+      />
 
       <div className="min-h-screen bg-white pt-24">
         <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-pool-deep via-pool-blue/30 to-pool-navy" />
+          <Image
+            src="/images/Bazen-hero-image.webp"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-pool-navy/85 via-pool-navy/70 to-pool-navy/90" />
           <div className="absolute inset-0 grid-bg opacity-20" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <nav className="flex items-center gap-2 text-pool-white/30 text-sm mb-8">

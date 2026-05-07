@@ -1,0 +1,19 @@
+{
+  "name": "DreamPool — Premium Bazeni",
+  "short_name": "DreamPool",
+  "description": "Premium bazeni po meri v Sloveniji in na Hrvaškem.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A1628",
+  "theme_color": "#0A1628",
+  "orientation": "portrait",
+  "lang": "sl-SI",
+  "icons": [
+    {
+      "src": "/images/Dreampool_logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

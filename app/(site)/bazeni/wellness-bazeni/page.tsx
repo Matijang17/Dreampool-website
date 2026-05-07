@@ -2,20 +2,51 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { CTASection } from '@/components/sections/CTASection'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { serviceSchema, breadcrumbSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Wellness Bazeni in Jacuzzi | DreamPool Slovenija',
   description: 'Wellness bazeni, jacuzzi in hidroterapija za dom. Masažne šobe, LED osvetlitev, ogrevanje — zasebni spa v vašem vrtu. Brezplačna ponudba.',
   keywords: ['wellness bazen', 'jacuzzi', 'hidroterapija', 'spa bazen', 'masažni bazen slovenija'],
-  alternates: { canonical: 'https://dreampool.si/bazeni/wellness-bazeni' },
+  alternates: { canonical: '/bazeni/wellness-bazeni' },
+  openGraph: {
+    title: 'Wellness Bazeni in Jacuzzi | DreamPool',
+    description: 'Zasebni spa v vrtu — masažne šobe, LED osvetlitev, hidroterapija.',
+    url: '/bazeni/wellness-bazeni',
+    images: [{ url: '/images/Bazen-hero-image.webp', width: 1200, height: 630 }],
+  },
 }
 
 export default function WellnessBazeni() {
   return (
     <>
+      <JsonLd
+        data={[
+          serviceSchema({
+            name: 'Wellness bazeni in jacuzzi',
+            description: 'Wellness bazeni, jacuzzi in hidroterapija — zasebni spa v vašem vrtu.',
+            url: '/bazeni/wellness-bazeni',
+            image: '/images/Bazen-hero-image.webp',
+          }),
+          breadcrumbSchema([
+            { name: 'Domov', url: '/' },
+            { name: 'Bazeni', url: '/gradnja-bazenov' },
+            { name: 'Wellness bazeni', url: '/bazeni/wellness-bazeni' },
+          ]),
+        ]}
+      />
       <div className="min-h-screen bg-white pt-24">
         <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-pool-deep via-pool-blue/30 to-pool-navy" />
+          <Image
+            src="/images/Bazen-hero-image.webp"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-pool-navy/85 via-pool-navy/70 to-pool-navy/90" />
           <div className="absolute inset-0 grid-bg opacity-20" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <nav className="flex items-center gap-2 text-pool-white/30 text-sm mb-8">

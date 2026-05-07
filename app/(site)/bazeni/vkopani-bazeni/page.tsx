@@ -2,12 +2,20 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { CTASection } from '@/components/sections/CTASection'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { serviceSchema, faqSchema, breadcrumbSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Vkopani Bazeni po Meri | DreamPool Slovenija',
   description: 'Gradnja vkopanih bazenov po meri v Sloveniji. Popolna svoboda oblike in velikosti. Premium materiali, garancija, brezplačna ponudba.',
   keywords: ['vkopani bazeni', 'vkopani bazen cena', 'vkopani bazen slovenija', 'betonski bazen', 'bazen po meri'],
-  alternates: { canonical: 'https://dreampool.si/bazeni/vkopani-bazeni' },
+  alternates: { canonical: '/bazeni/vkopani-bazeni' },
+  openGraph: {
+    title: 'Vkopani Bazeni po Meri | DreamPool',
+    description: 'Vkopani bazeni po meri — popolna svoboda oblike in velikosti.',
+    url: '/bazeni/vkopani-bazeni',
+    images: [{ url: '/images/Bazen-hero-image.webp', width: 1200, height: 630 }],
+  },
 }
 
 const faqs = [
@@ -19,9 +27,33 @@ const faqs = [
 export default function VkopaniBazeni() {
   return (
     <>
+      <JsonLd
+        data={[
+          serviceSchema({
+            name: 'Vkopani bazeni po meri',
+            description: 'Gradnja vkopanih betonskih in modularnih bazenov po meri — popolna svoboda oblike in velikosti.',
+            url: '/bazeni/vkopani-bazeni',
+            image: '/images/Bazen-hero-image.webp',
+          }),
+          faqSchema(faqs),
+          breadcrumbSchema([
+            { name: 'Domov', url: '/' },
+            { name: 'Bazeni', url: '/gradnja-bazenov' },
+            { name: 'Vkopani bazeni', url: '/bazeni/vkopani-bazeni' },
+          ]),
+        ]}
+      />
       <div className="min-h-screen bg-white pt-24">
         <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-pool-deep via-pool-blue/30 to-pool-navy" />
+          <Image
+            src="/images/Bazen-hero-image.webp"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-pool-navy/85 via-pool-navy/70 to-pool-navy/90" />
           <div className="absolute inset-0 grid-bg opacity-20" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <nav className="flex items-center gap-2 text-pool-white/30 text-sm mb-8">

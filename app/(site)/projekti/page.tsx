@@ -3,11 +3,19 @@ import Image from 'next/image'
 
 import { client, urlFor, projectsQuery } from '@/lib/sanity'
 import { CTASection } from '@/components/sections/CTASection'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { breadcrumbSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Naši Projekti — Galerija Bazenov | DreamPool',
   description: 'Oglejte si galerijo naših dokončanih bazenov po vsej Sloveniji. 50+ premium projektov — vkopani, overflow, infinity in wellness bazeni.',
-  alternates: { canonical: 'https://dreampool.si/projekti' },
+  alternates: { canonical: '/projekti' },
+  openGraph: {
+    title: 'Naši Projekti — Galerija Bazenov | DreamPool',
+    description: 'Galerija dokončanih bazenov DreamPool po vsej Sloveniji.',
+    url: '/projekti',
+    images: [{ url: '/images/Bazen-hero-image.webp', width: 1200, height: 630 }],
+  },
 }
 
 const staticProjects = [
@@ -32,6 +40,12 @@ export default async function ProjektiPage() {
 
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: 'Domov', url: '/' },
+          { name: 'Projekti', url: '/projekti' },
+        ])}
+      />
       <div className="min-h-screen bg-white pt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-2xl mb-16">

@@ -2,21 +2,21 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { CTASection } from '@/components/sections/CTASection'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { serviceSchema, faqSchema, breadcrumbSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Hidroizolacija Bazena s Folijo | Alkorplan | DreamPool',
   description:
     'Zamenjava ali nova vgradnja bazenske folije Alkorplan v Sloveniji. Trajna zaščita pred puščanjem, 10-letna garancija, široka izbira barv in vzorcev. Povpraševanje brez obveznosti.',
-  alternates: { canonical: 'https://dreampool.si/hidroizolacija/folija' },
-}
-
-const schema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'Hidroizolacija bazena s folijo',
-  provider: { '@type': 'LocalBusiness', name: 'DreamPool' },
-  areaServed: 'Slovenia',
-  description: 'Vgradnja in zamenjava bazenske hidroizolacijske folije Alkorplan v Sloveniji.',
+  keywords: ['hidroizolacija bazena', 'alkorplan folija', 'bazenska folija', 'zamenjava folije bazen'],
+  alternates: { canonical: '/hidroizolacija/folija' },
+  openGraph: {
+    title: 'Hidroizolacija Bazena s Folijo Alkorplan | DreamPool',
+    description: 'Vgradnja in zamenjava bazenske folije Alkorplan z 10-letno garancijo.',
+    url: '/hidroizolacija/folija',
+    images: [{ url: '/images/Bazen-hero-image.webp', width: 1200, height: 630 }],
+  },
 }
 
 const steps = [
@@ -54,11 +54,33 @@ const faqs = [
 export default function HidroizolacijaFolijaPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <JsonLd
+        data={[
+          serviceSchema({
+            name: 'Hidroizolacija bazena s folijo Alkorplan',
+            description: 'Vgradnja in zamenjava bazenske hidroizolacijske folije Alkorplan z 10-letno garancijo.',
+            url: '/hidroizolacija/folija',
+          }),
+          faqSchema(faqs),
+          breadcrumbSchema([
+            { name: 'Domov', url: '/' },
+            { name: 'Hidroizolacija', url: '/hidroizolacija/folija' },
+            { name: 'Hidroizolacija s folijo', url: '/hidroizolacija/folija' },
+          ]),
+        ]}
+      />
 
       <div className="min-h-screen bg-white pt-24">
         <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-pool-deep via-pool-blue/30 to-pool-navy" />
+          <Image
+            src="/images/Bazen-hero-image.webp"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-pool-navy/85 via-pool-navy/70 to-pool-navy/90" />
           <div className="absolute inset-0 grid-bg opacity-20" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <nav className="flex items-center gap-2 text-pool-white/30 text-sm mb-8">

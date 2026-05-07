@@ -1,11 +1,18 @@
 import type { Metadata } from 'next'
 import { ContactForm } from '@/components/ui/ContactForm'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { breadcrumbSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Brezplačna Ponudba za Bazen | DreamPool',
   description:
     'Pridobite brezplačno ponudbo za vaš bazen. Odgovorimo v 24 urah. Brez obveznosti, brez skritih stroškov.',
-  alternates: { canonical: 'https://dreampool.si/ponudba' },
+  alternates: { canonical: '/ponudba' },
+  openGraph: {
+    title: 'Brezplačna Ponudba za Bazen | DreamPool',
+    description: 'Brezplačno svetovanje in ponudba za vaš bazen v 24 urah.',
+    url: '/ponudba',
+  },
 }
 
 const steps = [
@@ -17,6 +24,13 @@ const steps = [
 
 export default function PonudbaPage() {
   return (
+    <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: 'Domov', url: '/' },
+          { name: 'Brezplačna ponudba', url: '/ponudba' },
+        ])}
+      />
     <div className="min-h-screen bg-white pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -76,5 +90,6 @@ export default function PonudbaPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

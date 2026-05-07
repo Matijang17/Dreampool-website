@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { SITE } from '@/lib/seo'
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,9 +7,10 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/studio/', '/api/'],
+        disallow: ['/studio', '/studio/', '/api/', '/_next/'],
       },
     ],
-    sitemap: 'https://dreampool.si/sitemap.xml',
+    sitemap: `${SITE.url}/sitemap.xml`,
+    host: SITE.url,
   }
 }

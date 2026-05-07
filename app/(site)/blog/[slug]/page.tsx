@@ -4,21 +4,39 @@ import Link from 'next/link'
 import { PortableText } from '@portabletext/react'
 import { client, blogPostQuery, urlFor } from '@/sanity/lib/client'
 import { CTASection } from '@/components/sections/CTASection'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { articleSchema, breadcrumbSchema } from '@/lib/seo'
 
 type Props = { params: { slug: string } }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   let post = null
   try { post = await client.fetch(blogPostQuery, { slug: params.slug }) } catch {}
-  if (!post) return { title: 'Blog | DreamPool' }
+  if (!post) {
+    return {
+      title: 'Članek ni najden | DreamPool',
+      robots: { index: false, follow: true },
+    }
+  }
+  const ogImg = post.mainImage ? urlFor(post.mainImage).width(1200).url() : undefined
   return {
     title: post.metaTitle || post.title,
     description: post.metaDescription || post.excerpt,
-    alternates: { canonical: `https://dreampool.si/blog/${params.slug}` },
+    alternates: { canonical: `/blog/${params.slug}` },
     openGraph: {
+      type: 'article',
       title: post.title,
       description: post.excerpt,
-      images: post.mainImage ? [{ url: urlFor(post.mainImage).width(1200).url() }] : [],
+      url: `/blog/${params.slug}`,
+      images: ogImg ? [{ url: ogImg, width: 1200, height: 630 }] : [],
+      publishedTime: post.publishedAt,
+      authors: post.author?.name ? [post.author.name] : undefined,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: ogImg ? [ogImg] : [],
     },
   }
 }
@@ -60,6 +78,23 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <>
+      <JsonLd
+        data={[
+          articleSchema({
+            title: post.title,
+            description: post.excerpt || '',
+            slug: params.slug,
+            image: imgSrc || undefined,
+            datePublished: post.publishedAt,
+            authorName: post.author?.name,
+          }),
+          breadcrumbSchema([
+            { name: 'Domov', url: '/' },
+            { name: 'Blog', url: '/blog' },
+            { name: post.title, url: `/blog/${params.slug}` },
+          ]),
+        ]}
+      />
       <article className="min-h-screen bg-pool-navy pt-24">
         {/* Hero */}
         {imgSrc && (
