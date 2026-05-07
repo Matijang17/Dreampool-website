@@ -6,7 +6,7 @@ const services = [
     title: 'Novogradnja bazenov',
     description:
       'Spremenite svoje dvorišče v zasebni vodni raj. Projektiramo in gradimo bazene po meri od prvotne ideje do prvega skoka — celoten proces v enih rokah.',
-    image: '/public/images/novogradnja-bazenov.webp',
+    image: '/images/novogradnja-bazenov.webp',
     href: '/gradnja-bazenov',
     featured: true,
   },
