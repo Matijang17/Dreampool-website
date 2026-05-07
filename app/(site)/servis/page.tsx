@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'Servis Bazenske Tehnike | DreamPool',
     description: 'Strokoven servis bazenske tehnike po Sloveniji — Astralpool, Microwell, Zodiac, Bayrol.',
     url: '/servis',
-    images: [{ url: '/images/vzdrzevanje-bazenov.webp', width: 1200, height: 630 }],
+    images: [{ url: '/images/vzdrzevanje-bazena.webp', width: 1200, height: 630 }],
   },
 }
 
@@ -172,7 +172,7 @@ export default function ServisPage() {
               </div>
               <div className="relative rounded-2xl overflow-hidden h-80">
                 <Image
-                  src="/images/vzdrzevanje-bazenov.webp"
+                  src="/images/vzdrzevanje-bazena.webp"
                   alt="Servis bazenske tehnike — DreamPool"
                   fill
                   className="object-cover"
