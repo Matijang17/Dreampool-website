@@ -45,9 +45,9 @@ export default function GradnjaBazenov() {
         ]}
       />
 
-      <div className="min-h-screen bg-white pt-24">
+      <div className="min-h-screen bg-white">
         {/* Hero */}
-        <section className="relative py-20 overflow-hidden">
+        <section className="relative pt-32 pb-20 overflow-hidden">
           <Image
             src="/images/Bazen-hero-image.webp"
             alt=""

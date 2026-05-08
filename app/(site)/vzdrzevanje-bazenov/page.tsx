@@ -75,8 +75,8 @@ export default function VzdrzevanjeBarenov() {
         ]}
       />
 
-      <div className="min-h-screen bg-white pt-24">
-        <section className="relative py-20 overflow-hidden">
+      <div className="min-h-screen bg-white">
+        <section className="relative pt-32 pb-20 overflow-hidden">
           <Image
             src="/images/servisiranje-bazenov.webp"
             alt=""
