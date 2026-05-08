@@ -17,9 +17,9 @@ const company = [
 ]
 
 const partners = [
-  { name: 'Alkorplan', src: 'https://cdn.sanity.io/images/u77huvva/production/c6d106fa9ba66fd818a5cac26e4109718f62c0a5-361x26.svg' },
-  { name: 'Astralpool', src: 'https://cdn.sanity.io/images/u77huvva/production/107ddad5b2b417bc80af678a33a89cac3237d969-180x28.svg' },
-  { name: 'Bayrol', src: 'https://cdn.sanity.io/images/u77huvva/production/26e9abc54139aaaa1f592474420c4fd6a2caa183-1800x600.webp' },
+  { name: 'Alkorplan', src: '/images/renolit-alkorplan.svg' },
+  { name: 'Astralpool', src: '/images/astrapool.svg' },
+  { name: 'Bayrol', src: '/images/bayrol.svg' },
 ]
 
 export function Footer() {
