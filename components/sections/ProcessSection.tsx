@@ -38,7 +38,7 @@ export function ProcessSection() {
           {/* Col 1, rows 1–2: large pool image with bottom overlay */}
           <div className="process-card-large relative rounded-2xl overflow-hidden group cursor-default shadow-md">
             <Image
-              src="https://cdn.sanity.io/images/u77huvva/production/46910edd87559712e9a315e8e3df4a6001a53040-600x479.jpg?w=800&fit=max&auto=format"
+              src="/images/bazen-kontakt.webp"
               alt="DreamPool bazeni"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -58,7 +58,7 @@ export function ProcessSection() {
           {/* Col 2, row 1: Svetovanje with photo */}
           <div className="relative rounded-2xl overflow-hidden group cursor-default min-h-[240px] shadow-md">
             <Image
-              src="https://cdn.sanity.io/images/u77huvva/production/30ddfd07f56ecd8711ba98de78d825d8ab68b279-600x483.jpg?w=600&fit=max&auto=format"
+              src="/images/svetovanje-bazen.webp"
               alt="Svetovanje"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -95,7 +95,7 @@ export function ProcessSection() {
           {/* Col 3, rows 1–2: construction photo with bottom overlay */}
           <div className="process-card-large relative rounded-2xl overflow-hidden group cursor-default shadow-md">
             <Image
-              src="https://cdn.sanity.io/images/u77huvva/production/f859b30257fad7d28d83d3c1996e36cf25fa9119-1200x896.jpg?w=600&fit=max&auto=format"
+              src="/images/gradnja-bazenov.webp"
               alt="Gradnja bazena"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
