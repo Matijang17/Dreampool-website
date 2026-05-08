@@ -56,7 +56,7 @@ const services = [
     title: 'Hidroizolacija s folijo',
     description:
       'Zamenjava ali nova vgradnja bazenske folije Alkorplan. Trajna zaščita pred puščanjem z 10-letno garancijo.',
-    image: 'https://cdn.sanity.io/images/u77huvva/production/f859b30257fad7d28d83d3c1996e36cf25fa9119-1200x896.jpg?w=600&fit=max&auto=format',
+    image: '/images/hidroizolacija-s-folijo.webp',
     href: '/hidroizolacija/folija',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
