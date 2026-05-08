@@ -98,7 +98,7 @@ export default function GradnjaBazenov() {
               </div>
               <div className="relative rounded-2xl overflow-hidden h-80">
                 <Image
-                  src="/images/gradnja-bazenov.webp"
+                  src="/images/novogradnja-bazenov.webp"
                   alt="Gradnja bazena - DreamPool"
                   fill
                   className="object-cover"
