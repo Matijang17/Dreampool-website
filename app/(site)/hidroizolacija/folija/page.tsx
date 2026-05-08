@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Hidroizolacija Bazena s Folijo Alkorplan | DreamPool',
     description: 'Vgradnja in zamenjava bazenske folije Alkorplan z 10-letno garancijo.',
     url: '/hidroizolacija/folija',
-    images: [{ url: '/images/Bazen-hero-image.webp', width: 1200, height: 630 }],
+    images: [{ url: '/images/hidroizolacija-s-folijo.webp', width: 1200, height: 630 }],
   },
 }
 
@@ -73,7 +73,7 @@ export default function HidroizolacijaFolijaPage() {
       <div className="min-h-screen bg-white">
         <section className="relative pt-32 pb-20 overflow-hidden">
           <Image
-            src="/images/Bazen-hero-image.webp"
+            src="/images/hidroizolacija-s-folijo-1.webp"
             alt=""
             fill
             priority
@@ -114,7 +114,7 @@ export default function HidroizolacijaFolijaPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
               <div className="relative rounded-2xl overflow-hidden h-80">
                 <Image
-                  src="https://cdn.sanity.io/images/u77huvva/production/f859b30257fad7d28d83d3c1996e36cf25fa9119-1200x896.jpg?w=800&fit=max&auto=format"
+                  src="/images/hidroizolacija-s-folijo.webp"
                   alt="Hidroizolacija bazena s folijo Alkorplan"
                   fill
                   className="object-cover"

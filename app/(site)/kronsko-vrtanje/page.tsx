@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Kronsko (Diamantno) Vrtanje | DreamPool',
     description: 'Diamantno vrtanje skozi beton, armirani beton in ploščice — Ø30 do Ø400 mm.',
     url: '/kronsko-vrtanje',
-    images: [{ url: '/images/Bazen-hero-image.webp', width: 1200, height: 630 }],
+    images: [{ url: '/images/kronsko-diamantno-vrtanje.webp', width: 1200, height: 630 }],
   },
 }
 
@@ -90,7 +90,7 @@ export default function KronskoVrtanjePage() {
       <div className="min-h-screen bg-white">
         <section className="relative pt-32 pb-20 overflow-hidden">
           <Image
-            src="/images/Bazen-hero-image.webp"
+            src="/images/kronsko-diamantno-vrtanje.webp"
             alt=""
             fill
             priority

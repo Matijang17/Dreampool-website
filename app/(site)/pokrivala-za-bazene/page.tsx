@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Pokrivala za Bazene | DreamPool',
     description: 'Zimska pokrivala in letne rolete za bazene — zaščita in prihranek pri ogrevanju.',
     url: '/pokrivala-za-bazene',
-    images: [{ url: '/images/Bazen-hero-image.webp', width: 1200, height: 630 }],
+    images: [{ url: '/images/pokrivala-za-bazene.webp', width: 1200, height: 630 }],
   },
 }
 
@@ -83,7 +83,7 @@ export default function PokrivalaZaBazene() {
       <div className="min-h-screen bg-white">
         <section className="relative pt-32 pb-20 overflow-hidden">
           <Image
-            src="/images/Bazen-hero-image.webp"
+            src="/images/pokrivala-za-bazene.webp"
             alt=""
             fill
             priority
