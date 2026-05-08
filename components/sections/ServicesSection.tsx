@@ -68,7 +68,7 @@ const services = [
     title: 'Hidroizolacije rezervoarjev',
     description:
       'Zanesljiva hidroizolacija cistern, zadrževalnikov deževnice in požarnih rezervoarjev. Certificirani materiali za pitno vodo.',
-    image: 'https://cdn.sanity.io/images/u77huvva/production/f859b30257fad7d28d83d3c1996e36cf25fa9119-1200x896.jpg?w=600&fit=max&auto=format',
+    image: '/images/hidroizolacija.webp',
     href: '/hidroizolacija/rezervoarji',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
