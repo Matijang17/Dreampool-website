@@ -76,20 +76,20 @@ export function ContactForm() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="font-display text-2xl font-bold text-pool-white mb-3">Hvala za povpraševanje!</h3>
-        <p className="text-pool-white/60">Kontaktirali vas bomo v roku 24 ur. Medtem nas pokličite na <a href="tel:+38670579648" className="text-pool-accent">070 579 648</a>.</p>
+        <h3 className="font-display text-2xl font-bold text-pool-navy mb-3">Hvala za povpraševanje!</h3>
+        <p className="text-pool-navy/65">Kontaktirali vas bomo v roku 24 ur. Medtem nas pokličite na <a href="tel:+38670579648" className="text-pool-accent">070 579 648</a>.</p>
       </div>
     )
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
-      <h2 className="font-display text-2xl font-bold text-pool-white mb-6">Pošljite povpraševanje</h2>
+      <h2 className="font-display text-2xl font-bold text-pool-navy mb-6">Pošljite povpraševanje</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {/* Name */}
         <div>
-          <label className="block text-pool-white/60 text-xs uppercase tracking-widest mb-2">
+          <label className="block text-pool-navy/55 text-xs uppercase tracking-widest mb-2">
             Ime in priimek *
           </label>
           <input
@@ -105,7 +105,7 @@ export function ContactForm() {
 
         {/* Phone */}
         <div>
-          <label className="block text-pool-white/60 text-xs uppercase tracking-widest mb-2">
+          <label className="block text-pool-navy/55 text-xs uppercase tracking-widest mb-2">
             Telefon *
           </label>
           <input
@@ -123,7 +123,7 @@ export function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {/* Email */}
         <div>
-          <label className="block text-pool-white/60 text-xs uppercase tracking-widest mb-2">
+          <label className="block text-pool-navy/55 text-xs uppercase tracking-widest mb-2">
             E-pošta
           </label>
           <input
@@ -138,7 +138,7 @@ export function ContactForm() {
 
         {/* Location */}
         <div>
-          <label className="block text-pool-white/60 text-xs uppercase tracking-widest mb-2">
+          <label className="block text-pool-navy/55 text-xs uppercase tracking-widest mb-2">
             Lokacija / kraj *
           </label>
           <input
@@ -173,7 +173,7 @@ export function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {/* Budget */}
         <div>
-          <label className="block text-pool-white/60 text-xs uppercase tracking-widest mb-2">
+          <label className="block text-pool-navy/55 text-xs uppercase tracking-widest mb-2">
             Okvirni budget
           </label>
           <select
@@ -189,7 +189,7 @@ export function ContactForm() {
 
         {/* Timeline */}
         <div>
-          <label className="block text-pool-white/60 text-xs uppercase tracking-widest mb-2">
+          <label className="block text-pool-navy/55 text-xs uppercase tracking-widest mb-2">
             Kdaj planirate?
           </label>
           <select
@@ -220,7 +220,7 @@ export function ContactForm() {
       </div>
 
       {status === 'error' && (
-        <p className="text-red-400 text-sm">Prišlo je do napake. Prosimo pokličite nas na 070 579 648.</p>
+        <p className="text-red-600 text-sm">Prišlo je do napake. Prosimo pokličite nas na 070 579 648.</p>
       )}
 
       <button
@@ -245,7 +245,7 @@ export function ContactForm() {
           </>
         )}
       </button>
-      <p className="text-pool-white/25 text-xs text-center">
+      <p className="text-pool-navy/40 text-xs text-center">
         Brez obveznosti · Odgovorimo v 24 urah · Vaši podatki so varni
       </p>
     </form>
