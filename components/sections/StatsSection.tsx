@@ -2,7 +2,7 @@ export function StatsSection() {
   const stats = [
     { value: '50+', label: 'Dokončanih projektov' },
     { value: '8', label: 'Let izkušenj' },
-    { value: '100%', label: 'Zadovoljnih strank' },
+    { value: '100%', label: 'Zadovoljstvo strank' },
     { value: '2', label: 'Leti garancija' },
   ]
 

@@ -163,7 +163,7 @@ export function ServicesSection() {
             {/* Featured badge */}
             <div className="absolute top-6 left-6 inline-flex items-center gap-2 bg-gradient-to-r from-pool-gold to-pool-gold-light text-pool-navy text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full shadow-lg shadow-pool-gold/30">
               <span className="w-1.5 h-1.5 rounded-full bg-pool-navy" />
-              Glavna storitev
+              Premium bazeni
             </div>
 
             {/* Content overlay */}
