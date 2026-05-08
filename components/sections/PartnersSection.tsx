@@ -3,9 +3,9 @@ import Image from 'next/image'
 const partners = [
   { name: 'Alkorplan', src: '/images/renolit-alkorplan.svg', w: 130, h: 30 },
   { name: 'Astralpool', src: '/images/astrapool.svg', w: 130, h: 30 },
-  { name: 'Bayrol', src: '/images/bayrol.avif', w: 100, h: 35 },
-  { name: 'Cepex', src: '/images/cepex.avif', w: 100, h: 35 },
-  { name: 'Microwell', src: '/images/microwell.avif', w: 120, h: 35 },
+  { name: 'Bayrol', src: '/images/bayrol.svg', w: 100, h: 35 },
+  { name: 'Cepex', src: '/images/cepex.svg', w: 100, h: 35 },
+  { name: 'Microwell', src: '/images/microwell.svg', w: 120, h: 35 },
 ]
 
 export function PartnersSection() {
