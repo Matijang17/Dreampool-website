@@ -44,7 +44,7 @@ const services = [
     title: 'Pokrivala za bazene',
     description:
       'Zimska pokrivala in letne rolete z ročnim ali avtomatskim pogonom. Zaščitite bazen in prihranite pri vzdrževanju.',
-    image: 'https://cdn.sanity.io/images/u77huvva/production/1bb606657d2e476e823436bac196ec3f3b965e0d-600x383.jpg?w=600&fit=max&auto=format',
+    image: '/images/pokrivala-za-bazene.webp',
     href: '/pokrivala-za-bazene',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
