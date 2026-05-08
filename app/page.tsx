@@ -6,6 +6,7 @@ import { WhyUsSection } from '@/components/sections/WhyUsSection'
 import { ProcessSection } from '@/components/sections/ProcessSection'
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection'
 import { PartnersSection } from '@/components/sections/PartnersSection'
+import { ContactSection } from '@/components/sections/ContactSection'
 import { CTASection } from '@/components/sections/CTASection'
 
 export const metadata: Metadata = {
@@ -31,6 +32,7 @@ export default function HomePage() {
       <ProcessSection />
       <TestimonialsSection />
       <PartnersSection />
+      <ContactSection />
       <CTASection />
     </>
   )

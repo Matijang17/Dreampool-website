@@ -99,7 +99,7 @@ export function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             placeholder="Janez Novak"
-            className="w-full bg-pool-navy border border-pool-white/15 focus:border-pool-accent rounded-sm px-4 py-3 text-pool-white placeholder-pool-white/25 text-sm outline-none transition-colors duration-200"
+            className="w-full bg-white border border-gray-200 focus:border-pool-accent rounded-lg px-4 py-3 text-pool-navy placeholder-pool-navy/30 text-sm outline-none transition-colors duration-200"
           />
         </div>
 
@@ -115,7 +115,7 @@ export function ContactForm() {
             value={formData.phone}
             onChange={handleChange}
             placeholder="+386 XX XXX XXX"
-            className="w-full bg-pool-navy border border-pool-white/15 focus:border-pool-accent rounded-sm px-4 py-3 text-pool-white placeholder-pool-white/25 text-sm outline-none transition-colors duration-200"
+            className="w-full bg-white border border-gray-200 focus:border-pool-accent rounded-lg px-4 py-3 text-pool-navy placeholder-pool-navy/30 text-sm outline-none transition-colors duration-200"
           />
         </div>
       </div>
@@ -132,7 +132,7 @@ export function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             placeholder="janez@email.com"
-            className="w-full bg-pool-navy border border-pool-white/15 focus:border-pool-accent rounded-sm px-4 py-3 text-pool-white placeholder-pool-white/25 text-sm outline-none transition-colors duration-200"
+            className="w-full bg-white border border-gray-200 focus:border-pool-accent rounded-lg px-4 py-3 text-pool-navy placeholder-pool-navy/30 text-sm outline-none transition-colors duration-200"
           />
         </div>
 
@@ -148,14 +148,14 @@ export function ContactForm() {
             value={formData.location}
             onChange={handleChange}
             placeholder="Ljubljana, Maribor..."
-            className="w-full bg-pool-navy border border-pool-white/15 focus:border-pool-accent rounded-sm px-4 py-3 text-pool-white placeholder-pool-white/25 text-sm outline-none transition-colors duration-200"
+            className="w-full bg-white border border-gray-200 focus:border-pool-accent rounded-lg px-4 py-3 text-pool-navy placeholder-pool-navy/30 text-sm outline-none transition-colors duration-200"
           />
         </div>
       </div>
 
       {/* Project type */}
       <div>
-        <label className="block text-pool-white/60 text-xs uppercase tracking-widest mb-2">
+        <label className="block text-pool-navy/55 text-xs uppercase tracking-widest mb-2">
           Tip projekta *
         </label>
         <select
@@ -163,7 +163,7 @@ export function ContactForm() {
           required
           value={formData.projectType}
           onChange={handleChange}
-          className="w-full bg-pool-navy border border-pool-white/15 focus:border-pool-accent rounded-sm px-4 py-3 text-pool-white text-sm outline-none transition-colors duration-200 appearance-none"
+          className="w-full bg-white border border-gray-200 focus:border-pool-accent rounded-lg px-4 py-3 text-pool-navy text-sm outline-none transition-colors duration-200 appearance-none"
         >
           <option value="" disabled>Izberite tip projekta</option>
           {projectTypes.map((t) => <option key={t} value={t}>{t}</option>)}
@@ -180,7 +180,7 @@ export function ContactForm() {
             name="budget"
             value={formData.budget}
             onChange={handleChange}
-            className="w-full bg-pool-navy border border-pool-white/15 focus:border-pool-accent rounded-sm px-4 py-3 text-pool-white text-sm outline-none transition-colors duration-200 appearance-none"
+            className="w-full bg-white border border-gray-200 focus:border-pool-accent rounded-lg px-4 py-3 text-pool-navy text-sm outline-none transition-colors duration-200 appearance-none"
           >
             <option value="">Izberite razpon</option>
             {budgets.map((b) => <option key={b} value={b}>{b}</option>)}
@@ -196,7 +196,7 @@ export function ContactForm() {
             name="timeline"
             value={formData.timeline}
             onChange={handleChange}
-            className="w-full bg-pool-navy border border-pool-white/15 focus:border-pool-accent rounded-sm px-4 py-3 text-pool-white text-sm outline-none transition-colors duration-200 appearance-none"
+            className="w-full bg-white border border-gray-200 focus:border-pool-accent rounded-lg px-4 py-3 text-pool-navy text-sm outline-none transition-colors duration-200 appearance-none"
           >
             <option value="">Izberite termin</option>
             {timelines.map((t) => <option key={t} value={t}>{t}</option>)}
@@ -206,7 +206,7 @@ export function ContactForm() {
 
       {/* Message */}
       <div>
-        <label className="block text-pool-white/60 text-xs uppercase tracking-widest mb-2">
+        <label className="block text-pool-navy/55 text-xs uppercase tracking-widest mb-2">
           Sporočilo / dodatne informacije
         </label>
         <textarea
@@ -215,7 +215,7 @@ export function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           placeholder="Opišite vaš projekt, velikost vrta, posebne zahteve..."
-          className="w-full bg-pool-navy border border-pool-white/15 focus:border-pool-accent rounded-sm px-4 py-3 text-pool-white placeholder-pool-white/25 text-sm outline-none transition-colors duration-200 resize-none"
+          className="w-full bg-white border border-gray-200 focus:border-pool-accent rounded-lg px-4 py-3 text-pool-navy placeholder-pool-navy/30 text-sm outline-none transition-colors duration-200 resize-none"
         />
       </div>
 
