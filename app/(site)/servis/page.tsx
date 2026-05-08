@@ -116,7 +116,7 @@ export default function ServisPage() {
       <div className="min-h-screen bg-white">
         <section className="relative pt-32 pb-20 overflow-hidden">
           <Image
-            src="/images/Bazen-hero-image.webp"
+            src="/images/vzdrzevanje-bazena.webp"
             alt=""
             fill
             priority
@@ -172,7 +172,7 @@ export default function ServisPage() {
               </div>
               <div className="relative rounded-2xl overflow-hidden h-80">
                 <Image
-                  src="/images/vzdrzevanje-bazena.webp"
+                  src="/images/servisiranje-bazenov.webp"
                   alt="Servis bazenske tehnike — DreamPool"
                   fill
                   className="object-cover"
