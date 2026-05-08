@@ -29,8 +29,12 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const pathname = usePathname()
-  const isHome = pathname === '/'
-  const pill = scrolled || !isHome
+
+  // Pages with light backgrounds need the white pilled navbar always.
+  // Pages with dark heroes (or dark page bg) can use the transparent nav at top.
+  const lightBgPages = ['/kontakt', '/ponudba', '/projekti']
+  const isLightBg = lightBgPages.includes(pathname)
+  const pill = scrolled || isLightBg
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60)
@@ -96,18 +100,20 @@ export function Header() {
                   </Link>
                 )}
 
-                {/* Dropdown */}
+                {/* Dropdown — pt-3 wrapper bridges hover gap from button */}
                 {link.dropdown && activeDropdown === link.label && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-64 bg-white border border-gray-100 rounded-2xl shadow-xl shadow-black/10 py-2 overflow-hidden">
-                    {link.dropdown.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="block px-4 py-2.5 text-sm text-pool-navy/65 hover:text-pool-accent hover:bg-gray-50 transition-all duration-150"
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-64 z-50">
+                    <div className="bg-white border border-gray-100 rounded-2xl shadow-xl shadow-black/10 py-2 overflow-hidden">
+                      {link.dropdown.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className="block px-4 py-2.5 text-sm text-pool-navy/65 hover:text-pool-accent hover:bg-gray-50 transition-all duration-150"
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>

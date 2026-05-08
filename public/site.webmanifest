@@ -10,9 +10,9 @@
   "lang": "sl-SI",
   "icons": [
     {
-      "src": "/images/Dreampool_logo.png",
-      "sizes": "512x512",
-      "type": "image/png",
+      "src": "/images/dreampool-favicon.webp",
+      "sizes": "any",
+      "type": "image/webp",
       "purpose": "any maskable"
     }
   ]

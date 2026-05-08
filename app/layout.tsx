@@ -111,10 +111,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/images/Dreampool_logo.png', sizes: '512x512', type: 'image/png' },
+      { url: '/images/dreampool-favicon.webp', type: 'image/webp', sizes: 'any' },
     ],
-    apple: { url: '/images/Dreampool_logo.png', sizes: '180x180', type: 'image/png' },
-    shortcut: '/images/Dreampool_logo.png',
+    apple: { url: '/images/dreampool-favicon.webp', type: 'image/webp', sizes: '180x180' },
+    shortcut: '/images/dreampool-favicon.webp',
   },
   manifest: '/site.webmanifest',
   category: 'business',
