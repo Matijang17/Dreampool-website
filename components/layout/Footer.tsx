@@ -18,13 +18,6 @@ const company = [
   { label: 'Ponudba', href: '/ponudba' },
 ]
 
-const partners = [
-  { name: 'Renolit Alkorplan', src: '/images/partnerji/renolit-alkorplan.svg', href: 'https://www.renolit.com/alkorplan/' },
-  { name: 'Astralpool', src: '/images/partnerji/astralpool-logo.webp', href: 'https://www.astralpool.com' },
-  { name: 'Bayrol', src: '/images/partnerji/bayrol.webp', href: 'https://www.bayrol.com' },
-  { name: 'Microwell', src: '/images/partnerji/microwell_logo-img.webp', href: 'https://www.microwell.eu' },
-  { name: 'Cepex', src: '/images/partnerji/cepex-tile.webp', href: 'https://www.cepex.com' },
-]
 
 export function Footer() {
   return (
@@ -127,23 +120,9 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Partnerji + kontakt */}
+          {/* CTA */}
           <div>
-            <h4 className="text-xs uppercase tracking-widest text-pool-accent mb-5">Naši partnerji</h4>
-            <div className="flex flex-col gap-4">
-              {partners.map((p) => (
-                <a key={p.name} href={p.href} target="_blank" rel="noopener noreferrer nofollow" aria-label={p.name} className="opacity-40 hover:opacity-70 transition-opacity">
-                  <Image
-                    src={p.src}
-                    alt={p.name}
-                    width={120}
-                    height={30}
-                    className="object-contain"
-                  />
-                </a>
-              ))}
-            </div>
-            <div className="mt-8">
+            <div>
               <Link href="/ponudba" className="btn-primary justify-center w-full">
                 Brezplačna ponudba
               </Link>
