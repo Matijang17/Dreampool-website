@@ -138,7 +138,7 @@ export function Footer() {
                     alt={p.name}
                     width={120}
                     height={30}
-                    className="object-contain brightness-0 invert"
+                    className="object-contain"
                   />
                 </a>
               ))}
