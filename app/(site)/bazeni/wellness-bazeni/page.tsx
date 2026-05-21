@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'Wellness Bazeni in Jacuzzi | DreamPool',
     description: 'Zasebni spa v vrtu — masažne šobe, LED osvetlitev, hidroterapija.',
     url: '/bazeni/wellness-bazeni',
-    images: [{ url: '/images/Bazen-hero-image.webp', width: 1200, height: 630 }],
+    images: [{ url: '/images/jacuzzi/jacuzzi.webp', width: 1200, height: 630 }],
   },
 }
 
@@ -27,7 +27,7 @@ export default function WellnessBazeni() {
             name: 'Wellness bazeni in jacuzzi',
             description: 'Wellness bazeni, jacuzzi in hidroterapija — zasebni spa v vašem vrtu.',
             url: '/bazeni/wellness-bazeni',
-            image: '/images/Bazen-hero-image.webp',
+            image: '/images/jacuzzi/jacuzzi.webp',
           }),
           breadcrumbSchema([
             { name: 'Domov', url: '/' },
@@ -39,7 +39,7 @@ export default function WellnessBazeni() {
       <div className="min-h-screen bg-white">
         <section className="relative pt-32 pb-20 overflow-hidden">
           <Image
-            src="/images/Bazen-hero-image.webp"
+            src="/images/jacuzzi/jacuzzi.webp"
             alt=""
             fill
             priority

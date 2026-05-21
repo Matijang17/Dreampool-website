@@ -102,7 +102,7 @@ export default function VkopaniBazeni() {
                 </div>
               </div>
               <div className="relative rounded-2xl overflow-hidden h-80">
-                <Image src="https://cdn.sanity.io/images/u77huvva/production/6da0045ebc99873dd993284fa370bc86a4dc51fa-5120x2880.jpg?w=800&fit=max&auto=format" alt="Vkopani bazen" fill className="object-cover" />
+                <Image src="/images/Bazara/bazara_bazen-2.webp" alt="Vkopani bazen" fill className="object-cover" />
               </div>
             </div>
             <div className="max-w-3xl mx-auto space-y-4">
