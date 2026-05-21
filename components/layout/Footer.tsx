@@ -3,10 +3,12 @@ import Image from 'next/image'
 
 const services = [
   { label: 'Novogradnja bazenov', href: '/gradnja-bazenov' },
-  { label: 'Vkopani bazeni', href: '/bazeni/vkopani-bazeni' },
-  { label: 'Overflow bazeni', href: '/bazeni/overflow-bazeni' },
-  { label: 'Wellness & Jacuzzi', href: '/bazeni/wellness-bazeni' },
-  { label: 'Servis & Vzdrževanje', href: '/servis' },
+  { label: 'Servis bazenske tehnike', href: '/servis' },
+  { label: 'Vzdrževanje bazenov', href: '/vzdrzevanje-bazenov' },
+  { label: 'Pokrivala za bazene', href: '/pokrivala-za-bazene' },
+  { label: 'Kronsko vrtanje', href: '/kronsko-vrtanje' },
+  { label: 'Hidroizolacija s folijo', href: '/hidroizolacija/folija' },
+  { label: 'Hidroizolacije rezervoarjev', href: '/hidroizolacija/rezervoarji' },
 ]
 
 const company = [
@@ -17,9 +19,11 @@ const company = [
 ]
 
 const partners = [
-  { name: 'Alkorplan', src: '/images/renolit-alkorplan.svg' },
-  { name: 'Astralpool', src: '/images/astrapool.svg' },
-  { name: 'Bayrol', src: '/images/bayrol.svg' },
+  { name: 'Renolit Alkorplan', src: '/images/partnerji/renolit-alkorplan.svg', href: 'https://www.renolit.com/alkorplan/' },
+  { name: 'Astralpool', src: '/images/partnerji/astralpool-logo.webp', href: 'https://www.astralpool.com' },
+  { name: 'Bayrol', src: '/images/partnerji/bayrol.webp', href: 'https://www.bayrol.com' },
+  { name: 'Microwell', src: '/images/partnerji/microwell_logo-img.webp', href: 'https://www.microwell.eu' },
+  { name: 'Cepex', src: '/images/partnerji/cepex-tile.webp', href: 'https://www.cepex.com' },
 ]
 
 export function Footer() {
@@ -128,7 +132,7 @@ export function Footer() {
             <h4 className="text-xs uppercase tracking-widest text-pool-accent mb-5">Naši partnerji</h4>
             <div className="flex flex-col gap-4">
               {partners.map((p) => (
-                <div key={p.name} className="opacity-40 hover:opacity-70 transition-opacity">
+                <a key={p.name} href={p.href} target="_blank" rel="noopener noreferrer nofollow" aria-label={p.name} className="opacity-40 hover:opacity-70 transition-opacity">
                   <Image
                     src={p.src}
                     alt={p.name}
@@ -136,7 +140,7 @@ export function Footer() {
                     height={30}
                     className="object-contain brightness-0 invert"
                   />
-                </div>
+                </a>
               ))}
             </div>
             <div className="mt-8">

@@ -1,11 +1,36 @@
 import Image from 'next/image'
 
 const partners = [
-  { name: 'Alkorplan', src: '/images/renolit-alkorplan.svg', w: 130, h: 30 },
-  { name: 'Astralpool', src: '/images/astrapool.svg', w: 130, h: 30 },
-  { name: 'Bayrol', src: '/images/bayrol.svg', w: 100, h: 35 },
-  { name: 'Cepex', src: '/images/cepex.svg', w: 100, h: 35 },
-  { name: 'Microwell', src: '/images/microwell.svg', w: 120, h: 35 },
+  {
+    name: 'Renolit Alkorplan',
+    src: '/images/partnerji/renolit-alkorplan.svg',
+    w: 140, h: 36,
+    href: 'https://www.renolit.com/alkorplan/',
+  },
+  {
+    name: 'Astralpool',
+    src: '/images/partnerji/astralpool-logo.webp',
+    w: 140, h: 36,
+    href: 'https://www.astralpool.com',
+  },
+  {
+    name: 'Bayrol',
+    src: '/images/partnerji/bayrol.webp',
+    w: 110, h: 36,
+    href: 'https://www.bayrol.com',
+  },
+  {
+    name: 'Cepex',
+    src: '/images/partnerji/cepex-tile.webp',
+    w: 110, h: 36,
+    href: 'https://www.cepex.com',
+  },
+  {
+    name: 'Microwell',
+    src: '/images/partnerji/microwell_logo-img.webp',
+    w: 130, h: 36,
+    href: 'https://www.microwell.eu',
+  },
 ]
 
 export function PartnersSection() {
@@ -15,17 +40,25 @@ export function PartnersSection() {
         <p className="text-center text-pool-navy/35 text-xs uppercase tracking-widest mb-10">
           Zaupanje vodilnih v industriji
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-12">
+        <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
           {partners.map((p) => (
-            <div key={p.name} className="opacity-30 hover:opacity-70 transition-opacity duration-300 grayscale hover:grayscale-0">
+            <a
+              key={p.name}
+              href={p.href}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              aria-label={p.name}
+              title={p.name}
+              className="opacity-35 hover:opacity-75 transition-opacity duration-300 grayscale hover:grayscale-0"
+            >
               <Image
                 src={p.src}
                 alt={p.name}
                 width={p.w}
                 height={p.h}
-                className="object-contain brightness-0"
+                className="object-contain"
               />
-            </div>
+            </a>
           ))}
         </div>
       </div>

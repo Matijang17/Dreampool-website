@@ -3,6 +3,7 @@ import { HeroSection } from '@/components/sections/HeroSection'
 import { StatsSection } from '@/components/sections/StatsSection'
 import { ServicesSection } from '@/components/sections/ServicesSection'
 import { WhyUsSection } from '@/components/sections/WhyUsSection'
+import { BeforeAfterSection } from '@/components/sections/BeforeAfterSection'
 import { ProcessSection } from '@/components/sections/ProcessSection'
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection'
 import { PartnersSection } from '@/components/sections/PartnersSection'
@@ -29,6 +30,7 @@ export default function HomePage() {
       <StatsSection />
       <ServicesSection />
       <WhyUsSection />
+      <BeforeAfterSection />
       <ProcessSection />
       <TestimonialsSection />
       <PartnersSection />

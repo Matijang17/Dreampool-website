@@ -11,6 +11,16 @@ type Project = {
 
 const projects: Project[] = [
   {
+    id: 'bazara',
+    location: 'Bazara, Slovenija',
+    images: [
+      '/images/Bazara/bazara_bazen.webp',
+      '/images/Bazara/bazara_bazen-1.webp',
+      '/images/Bazara/bazarab_bazen-2.webp',
+      '/images/Bazara/bazara_bazen-3.webp',
+    ],
+  },
+  {
     id: 'kaprije',
     location: 'Kaprije, Hrvaška',
     images: [
@@ -35,6 +45,22 @@ const projects: Project[] = [
       '/images/Ozeljan/ozelja-bazen.webp',
       '/images/Ozeljan/ozelja-bazen-1.webp',
       '/images/Ozeljan/ozeljan_bazen-2.webp',
+    ],
+  },
+  {
+    id: 'pivka',
+    location: 'Pivka, Slovenija',
+    images: [
+      '/images/Pivka/pivka-bazen.webp',
+      '/images/Pivka/pivka_bazen-1.webp',
+      '/images/Pivka/pivka_bazen-2.webp',
+    ],
+  },
+  {
+    id: 'rozna-dolina',
+    location: 'Rožna Dolina, Slovenija',
+    images: [
+      '/images/Rozna-Dolina/rozn-dolina.webp',
     ],
   },
 ]
