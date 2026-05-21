@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
     const resend = new Resend(process.env.RESEND_API_KEY)
 
     await resend.emails.send({
-      from: 'DreamPool <noreply@dreampool.si>',
+      from: process.env.RESEND_FROM || 'DreamPool <onboarding@resend.dev>',
       to: [TO],
       replyTo: email || undefined,
       subject: `Novo povpraševanje — ${name} (${projectType})`,
