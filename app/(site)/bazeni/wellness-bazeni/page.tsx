@@ -92,7 +92,7 @@ export default function WellnessBazeni() {
                 </div>
               </div>
               <div className="relative rounded-2xl overflow-hidden h-80">
-                <Image src="https://cdn.sanity.io/images/u77huvva/production/3148dc011711f8ce31c71fd854c39d43ba78280c-5120x2880.jpg?w=800&fit=max&auto=format" alt="Wellness bazen" fill className="object-cover" />
+                <Image src="/images/jacuzzi/jacuzzi.webp" alt="Wellness bazen" fill className="object-cover" />
               </div>
             </div>
           </div>
