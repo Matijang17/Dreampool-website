@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { ResetConsentButton } from '@/components/ui/ResetConsentButton'
 
 export const metadata: Metadata = {
   title: 'Politika piškotkov | DreamPool',
@@ -83,7 +84,7 @@ export default function PiskotkyPage() {
             <h2 className="font-display text-xl font-bold text-pool-navy mb-3">Upravljanje piškotkov</h2>
             <p className="mb-3">Nastavitve piškotkov lahko kadar koli spremenite:</p>
             <ul className="list-disc pl-5 text-sm space-y-1">
-              <li>Prek <button onClick={() => { if (typeof window !== 'undefined') { localStorage.removeItem('dp-cookie-consent'); window.location.reload() } }} className="text-pool-accent hover:underline cursor-pointer">nastavitev piškotkov</button> na tej strani (prikaže baner znova)</li>
+              <li>Prek <ResetConsentButton /> na tej strani (prikaže baner znova)</li>
               <li>V nastavitvah vašega brskalnika (Chrome, Firefox, Safari, Edge)</li>
               <li>Prek opt-out strani posameznih platform (Google, Meta, TikTok, LinkedIn)</li>
             </ul>
