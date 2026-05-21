@@ -23,7 +23,7 @@ const steps = [
   { num: '01', title: 'Ogled in merjenje', desc: 'Preverimo stanje obstoječe folije, izmerimo bazen in ocenimo obseg del. Brez obveznosti.' },
   { num: '02', title: 'Izbira folije', desc: 'Skupaj izberemo barvo in vzorec Alkorplan folije — od klasične modre do modernih granitnih in marmornih vzorcev.' },
   { num: '03', title: 'Priprava površine', desc: 'Izpraznitev bazena, čiščenje in izravnava podlage. Odstranitev stare folije, če gre za zamenjavo.' },
-  { num: '04', title: 'Vgradnja folije', desc: 'Profesionalna vgradnja z varjenjem na vroče — neprekinjeni šivi brez šibkih mest. Vsi prehodi (priključki, luči) so tesno zavarjeni.' },
+  { num: '04', title: 'Vgradnja folije', desc: 'Profesionalna vgradnja z varjenjem na vroče — neprekinjeni šivi brez šibkih mest. Vsi prehodi so tesno zavarjeni.' },
   { num: '05', title: 'Preizkus tesnosti', desc: 'Po vgradnji opravimo preizkus tesnosti in pregled vseh šivov in priključkov.' },
   { num: '06', title: 'Predaja z garancijo', desc: 'Bazen predamo z 10-letno garancijo na vgrajeno folijo in pisnim potrdilom o izvedbi.' },
 ]
