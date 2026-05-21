@@ -44,7 +44,7 @@ export function BeforeAfterSection() {
             >
               {/* After image (base) */}
               <Image
-                src="/images/Rozna-dolina-before_after/rozna_dolina-after.webp"
+                src="/images/Rozna-dolina-before_after/rozna_dolina-after-1.webp"
                 alt="Po prenovi — Rožna Dolina"
                 fill
                 className="object-cover pointer-events-none"
