@@ -144,6 +144,9 @@ export function Footer() {
             <Link href="/piskotki" className="text-pool-white/30 hover:text-pool-accent text-xs transition-colors">
               Piškotki
             </Link>
+            <Link href="/pogoji" className="text-pool-white/30 hover:text-pool-accent text-xs transition-colors">
+              Pogoji uporabe
+            </Link>
           </div>
         </div>
       </div>

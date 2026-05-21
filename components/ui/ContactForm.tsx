@@ -32,6 +32,7 @@ const timelines = [
 
 export function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [agreed, setAgreed] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -50,6 +51,8 @@ export function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus('loading')
+
+    if (!agreed) return
 
     try {
       const res = await fetch('/api/contact', {
@@ -219,13 +222,31 @@ export function ContactForm() {
         />
       </div>
 
+      {/* Consent */}
+      <label className="flex items-start gap-3 cursor-pointer group">
+        <input
+          type="checkbox"
+          required
+          checked={agreed}
+          onChange={(e) => setAgreed(e.target.checked)}
+          className="mt-0.5 w-4 h-4 rounded accent-pool-accent flex-shrink-0"
+        />
+        <span className="text-pool-navy/55 text-xs leading-relaxed">
+          Strinjam se s{' '}
+          <a href="/pogoji" target="_blank" rel="noopener noreferrer" className="text-pool-accent hover:underline">Pogoji uporabe</a>
+          {' '}in{' '}
+          <a href="/zasebnost" target="_blank" rel="noopener noreferrer" className="text-pool-accent hover:underline">Politiko zasebnosti</a>
+          {' '}ter dovoljujem obdelavo osebnih podatkov za namen obravnave tega povpraševanja. *
+        </span>
+      </label>
+
       {status === 'error' && (
         <p className="text-red-600 text-sm">Prišlo je do napake. Prosimo pokličite nas na 070 579 648.</p>
       )}
 
       <button
         type="submit"
-        disabled={status === 'loading'}
+        disabled={status === 'loading' || !agreed}
         className="btn-primary w-full justify-center text-base py-4 disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {status === 'loading' ? (

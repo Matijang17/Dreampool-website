@@ -4,6 +4,7 @@ import './globals.css'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { StickyContact } from '@/components/ui/StickyContact'
+import { CookieBanner } from '@/components/ui/CookieBanner'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { SITE, organizationSchema, localBusinessSchema, websiteSchema } from '@/lib/seo'
 
@@ -138,6 +139,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <StickyContact />
+        <CookieBanner />
       </body>
     </html>
   )
