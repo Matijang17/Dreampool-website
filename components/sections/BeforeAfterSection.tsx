@@ -98,7 +98,7 @@ export function BeforeAfterSection() {
                 </div>
               ))}
               <div className="relative w-20 h-14 rounded-xl overflow-hidden shadow-md">
-                <Image src="/images/Rozna-Dolina/rozn-dolina.webp" alt="Rožna Dolina bazen" fill className="object-cover" sizes="80px" />
+                <Image src="/images/Rozna-Dolina/rozna_dolina-after.webp" alt="Rožna Dolina bazen" fill className="object-cover" sizes="80px" />
               </div>
             </div>
           </div>
