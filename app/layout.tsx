@@ -6,6 +6,7 @@ import { StickyContact } from '@/components/ui/StickyContact'
 import { CookieBanner } from '@/components/ui/CookieBanner'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { SITE, organizationSchema, localBusinessSchema, websiteSchema } from '@/lib/seo'
+import { GoogleAnalytics } from '@next/third-parties/google' // <-- 1. UVOZ PAKETA
 
 const playfair = Playfair_Display({
   subsets: ['latin', 'latin-ext'],
@@ -42,20 +43,10 @@ export const metadata: Metadata = {
   applicationName: SITE.name,
   generator: 'Next.js',
   keywords: [
-    'bazeni',
-    'gradnja bazenov',
-    'bazeni slovenija',
-    'vkopani bazeni',
-    'overflow bazen',
-    'wellness bazen',
-    'bazen cena',
-    'bazeni ljubljana',
-    'bazeni maribor',
-    'premium bazeni',
-    'pokrivala za bazene',
-    'hidroizolacija bazena',
-    'servis bazenov',
-    'dreampool',
+    'bazeni', 'gradnja bazenov', 'bazeni slovenija', 'vkopani bazeni', 
+    'overflow bazen', 'wellness bazen', 'bazen cena', 'bazeni ljubljana', 
+    'bazeni maribor', 'premium bazeni', 'pokrivala za bazene', 
+    'hidroizolacija bazena', 'servis bazenov', 'dreampool'
   ],
   authors: [{ name: SITE.name, url: SITE.url }],
   creator: SITE.name,
@@ -131,12 +122,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="geo.placename" content="Volčja Draga" />
         <meta name="geo.position" content={`${SITE.latitude};${SITE.longitude}`} />
         <meta name="ICBM" content={`${SITE.latitude}, ${SITE.longitude}`} />
-
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-S6DNHPH2D1"></script>
-        <script>
-          {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-S6DNHPH2D1');`}
-        </script>
+        
+        {/* STARI <script> TAGI SO BILI ODSTRANJENI OD TU */}
       </head>
       <body className="bg-pool-white text-pool-white font-body antialiased">
         <JsonLd data={[organizationSchema, localBusinessSchema, websiteSchema]} id="schema-root" />
@@ -145,6 +132,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <StickyContact />
         <CookieBanner />
+        
+        {/* 2. URADNA NEXT.JS ANALITIKA POSTAVLJENA NA DNO BODY-JA */}
+        <GoogleAnalytics gaId="G-S6DNHPH2D1" />
       </body>
     </html>
   )
