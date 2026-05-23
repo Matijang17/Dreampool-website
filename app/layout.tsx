@@ -132,6 +132,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="geo.placename" content="Volčja Draga" />
         <meta name="geo.position" content={`${SITE.latitude};${SITE.longitude}`} />
         <meta name="ICBM" content={`${SITE.latitude}, ${SITE.longitude}`} />
+
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-S6DNHPH2D1"></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-S6DNHPH2D1');`}
+        </script>
       </head>
       <body className="bg-pool-white text-pool-white font-body antialiased">
         <JsonLd data={[organizationSchema, localBusinessSchema, websiteSchema]} id="schema-root" />
