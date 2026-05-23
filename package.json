@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "build:vercel": "npm install --legacy-peer-deps && next build",
-    "prebuild:vercel": "echo prebuild:vercel" ,
+    "prebuild:vercel": "echo prebuild:vercel",
     "start": "next start",
     "lint": "next lint"
   },
@@ -21,7 +21,7 @@
     "react-dom": "^18",
     "react-is": "^19.2.5",
     "resend": "^6.12.3",
-    "sanity": "^3.70.0",
+    "sanity": "^5.26.0",
     "styled-components": "^6.4.1"
   },
   "devDependencies": {
