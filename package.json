@@ -5,8 +5,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:vercel": "npm install --legacy-peer-deps && next build",
-    "prebuild:vercel": "echo prebuild:vercel",
     "start": "next start",
     "lint": "next lint"
   },
