@@ -62,6 +62,17 @@ export function ContactForm() {
       })
       if (res.ok) {
         setStatus('success')
+        
+        // GTM Tracking - Custom Event za uspešno oddajo
+        if (typeof window !== 'undefined' && (window as any).dataLayer) {
+          (window as any).dataLayer.push({
+            event: 'generate_lead',
+            form_id: 'contact_form_main',
+            project_type: formData.projectType,
+            location: formData.location
+          });
+        }
+
         setFormData({ name: '', phone: '', email: '', location: '', projectType: '', budget: '', timeline: '', message: '' })
       } else {
         setStatus('error')
