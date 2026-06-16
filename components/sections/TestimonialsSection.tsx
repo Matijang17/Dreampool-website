@@ -43,7 +43,7 @@ export function TestimonialsSection() {
                 Naša uspešnost se meri z zadovoljstvom strank. Vsak projekt je zgrajen z enako skrbjo in predanostjo.
               </p>
               <a
-                href="https://g.page/r/dreampool"
+                href="https://www.google.com/search?sca_esv=ab325edc4e2c3391&hl=en-GB&authuser=0&sxsrf=ANbL-n6aCU3xeJeS2iXODM6DIsDjVTrPtg:1781602664915&q=Izgradnja+bazenov+in+bazenska+tehnika+-+DreamPool&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOShg1VoVzpCybLA6I12l4U54ZfuwOsNuH2qHP0uZK0oymdvqnKMeGTcDtztaYWJ6a1tAYFk%3D&uds=ALYpb_klwkuiC0UUSTfW8hMh8Cpd6DI7NTQfwnhll_RnypXUGiK1zCCLJrDDBBMe_xOjBIt6OWUUv1KxTedI1yHYLSymZvkaEIy_3j7W-v0r-drbyCi6SGhI4QHuI41hAsF19_5DPdhrDwCtZTgvKSkAYe3M8f6kYA&sa=X&ved=2ahUKEwjhieSPu4uVAxWthP0HHbvNCtkQ3PALegQIGhAE&biw=1400&bih=702&dpr=2"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-pool-accent font-semibold text-sm tracking-wide hover:text-pool-blue transition-colors duration-200"
