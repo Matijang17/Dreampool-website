@@ -134,7 +134,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="geo.position" content={`${SITE.latitude};${SITE.longitude}`} />
         <meta name="ICBM" content={`${SITE.latitude}, ${SITE.longitude}`} />
 
-        {/* Google Tag Manager & Consent Mode v2 Initialization */}
+        {/* Google Tag Manager & Consent Mode v2 */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
