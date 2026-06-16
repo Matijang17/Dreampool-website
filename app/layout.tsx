@@ -134,18 +134,37 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="geo.position" content={`${SITE.latitude};${SITE.longitude}`} />
         <meta name="ICBM" content={`${SITE.latitude}, ${SITE.longitude}`} />
 
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-S6DNHPH2D1"></script>
+        {/* Google Tag Manager & Consent Mode v2 Initialization */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-           function gtag(){dataLayer.push(arguments);}
-           gtag('js', new Date());
-           gtag('config', 'G-S6DNHPH2D1');`,
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              
+              gtag('consent', 'default', {
+                'analytics_storage': 'denied',
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied'
+              });
+
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-T6G97LQS');`,
           }}
         />
       </head>
       <body className="bg-pool-white text-pool-white font-body antialiased">
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-T6G97LQS"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <JsonLd data={[organizationSchema, localBusinessSchema, websiteSchema]} id="schema-root" />
         <Header />
         <main>{children}</main>

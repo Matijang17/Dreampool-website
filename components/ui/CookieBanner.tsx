@@ -34,7 +34,13 @@ export function CookieBanner() {
   const [marketing, setMarketing] = useState(true)
 
   useEffect(() => {
-    if (!getStored()) setVisible(true)
+    const stored = getStored()
+    if (!stored) {
+      setVisible(true)
+    } else {
+      // Restore consent state to gtag on every mount for returning users
+      saveConsent(stored)
+    }
   }, [])
 
   if (!visible) return null
