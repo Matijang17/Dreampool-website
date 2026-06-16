@@ -11,17 +11,30 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Manjkajo obvezna polja' }, { status: 400 })
     }
 
-    if (!process.env.RESEND_API_KEY) {
-      console.warn('RESEND_API_KEY not set — email not sent')
-      return NextResponse.json({ success: true })
+    // Preverjanje konfiguracije za SMTP
+    const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS } = process.env
+    if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
+      console.warn('SMTP settings not set — email not sent')
+      return NextResponse.json({ error: 'E-poštni strežnik ni konfiguriran' }, { status: 500 })
     }
 
-    const { Resend } = await import('resend')
-    const resend = new Resend(process.env.RESEND_API_KEY)
+    const nodemailer = await import('nodemailer')
+    
+    // Ustvarjanje transporterja za SMTP
+    const transporter = nodemailer.createTransport({
+      host: SMTP_HOST,
+      port: parseInt(SMTP_PORT || '465'),
+      secure: (SMTP_PORT || '465') === '465', // true za port 465, false za ostale
+      auth: {
+        user: SMTP_USER,
+        pass: SMTP_PASS,
+      },
+    })
 
-    await resend.emails.send({
-      from: process.env.RESEND_FROM || 'DreamPool <onboarding@resend.dev>',
-      to: [TO],
+    // Pošiljanje e-pošte
+    await transporter.sendMail({
+      from: `"${name} (DreamPool)" <${SMTP_USER}>`,
+      to: TO,
       replyTo: email || undefined,
       subject: `Novo povpraševanje — ${name} (${projectType})`,
       html: buildEmailHtml({ name, phone, email, location, projectType, budget, timeline, message }),

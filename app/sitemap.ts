@@ -21,6 +21,8 @@ const staticRoutes: { path: string; changeFrequency: Freq; priority: number }[] 
   { path: '/kontakt', changeFrequency: 'yearly', priority: 0.6 },
   { path: '/ponudba', changeFrequency: 'yearly', priority: 0.9 },
   { path: '/zasebnost', changeFrequency: 'yearly', priority: 0.2 },
+  { path: '/piskotki', changeFrequency: 'yearly', priority: 0.2 },
+  { path: '/pogoji', changeFrequency: 'yearly', priority: 0.2 },
 ]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

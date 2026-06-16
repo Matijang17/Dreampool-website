@@ -1,14 +1,5 @@
-import { createClient } from 'next-sanity';
+import { client } from '@/sanity/lib/client';
 import { SITE } from '@/lib/seo';
-
-// Konfiguracija Sanity klienta
-// apiVersion nastavimo na stabilen datum, da zagotovimo delovanje
-const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-  apiVersion: '2024-01-01',
-  useCdn: true,
-});
 
 export async function GET() {
   let projectList = '';
