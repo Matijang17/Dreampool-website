@@ -16,7 +16,7 @@ const projects: Project[] = [
     images: [
       '/images/Bazara/bazara_bazen.webp',
       '/images/Bazara/bazara_bazen-1.webp',
-      '/images/Bazara/bazarab_bazen-2.webp',
+      '/images/Bazara/bazara_bazen-2.webp',
       '/images/Bazara/bazara_bazen-3.webp',
     ],
   },
@@ -61,6 +61,15 @@ const projects: Project[] = [
     location: 'Rožna Dolina, Slovenija',
     images: [
       '/images/Rozna-Dolina/rozn-dolina.webp',
+    ],
+  },
+  {
+    id: 'pag-simuni',
+    location: 'Pag-Šimuni, Hrvaška',
+    images: [
+      '/images/Pag/pag-simuni.webp',
+      '/images/Pag/pag-simuni_1.webp',
+      '/images/Pag/pag-simuni_2.webp',
     ],
   },
 ]
