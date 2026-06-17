@@ -31,7 +31,7 @@ const projects: Project[] = [
   },
   {
     id: 'marezige',
-    location: 'Marežige, Slovenija',
+    location: 'Marezige, Slovenija',
     images: [
       '/images/Marezige/marezige_bazen.webp',
       '/images/Marezige/marezige_bazen-1.webp',
