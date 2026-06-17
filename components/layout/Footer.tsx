@@ -147,6 +147,9 @@ export function Footer() {
             <Link href="/pogoji" className="text-pool-white/30 hover:text-pool-accent text-xs transition-colors">
               Pogoji uporabe
             </Link>
+            <a href="https://ofrdweb.com/" target="_blank" rel="noopener noreferrer" className="text-pool-white/30 hover:text-pool-accent text-xs transition-colors">
+              Urejanje strani ofrdweb
+            </a>
           </div>
         </div>
       </div>
