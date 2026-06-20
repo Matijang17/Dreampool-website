@@ -62,15 +62,23 @@ export function ContactForm() {
       })
       if (res.ok) {
         setStatus('success')
-        
+
         // GTM Tracking - Custom Event za uspešno oddajo
         if (typeof window !== 'undefined' && (window as any).dataLayer) {
-          (window as any).dataLayer.push({
+          ;(window as any).dataLayer.push({
             event: 'generate_lead',
             form_id: 'contact_form_main',
             project_type: formData.projectType,
-            location: formData.location
-          });
+            location: formData.location,
+          })
+        }
+
+        // Meta Pixel Tracking (Lead) - pomembno za kampanje optimizirane za Lead
+        if (typeof window !== 'undefined' && (window as any).fbq) {
+          ;(window as any).fbq('track', 'Lead', {
+            content_name: formData.projectType || undefined,
+            content_category: formData.location || undefined,
+          })
         }
 
         setFormData({ name: '', phone: '', email: '', location: '', projectType: '', budget: '', timeline: '', message: '' })
